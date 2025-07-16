@@ -1,0 +1,60 @@
+name: EKS-dev
+description: "Create an EKS cluster"
+parameters: 
+  - name: "csi-id"
+    type: "input"
+    prompt: "Whta is your app CSI ID:"
+    help: "THis is the help for CSI ID name"
+    default: "168491"
+    validation:
+      - type: "regex"
+        pattern: "^[a-zA-Z0-9-]+$"
+        message:  "The CSI ID format is invalid"
+
+  - name: "sector"
+    type: "input"
+    prompt: "What Citi sector/LOB do you belong to:"
+    help: "THis is the help for sector name"
+    default: "CTS"
+    validation:
+      - type: "regex"
+        pattern: "^[a-zA-Z0-9-]+$"
+        message:  "The sector name is not acceptable.  Try again"
+
+  - name: "aws_account_name"
+    type: "input"
+    prompt: "Enter AWS Account Name Folder:"
+    help: "This will be used in the path to auto.tfvars"
+    default: "my-aws-account"
+
+  - name: "environment"
+    type: "multi-select"
+    prompt: "Enter your environmet"
+    help: "this is help for the environment"
+    default: "dev"
+    options:
+      - "dev"
+      - "prod"	
+
+  - name: "cluster-name"
+    type: "input"
+    prompt: "EKS Cluster Name"
+    help: "THis is the help for EKS name"
+    default: "eks-name"
+    validation:
+      - type: "regex"
+        pattern: "^[a-zA-Z0-9-]+$"
+        message:  "The cluster name is not acceptable.  Try again"
+
+  - name: "region"
+    type: "multi-select"
+    prompt: "Enter the region where the S3 bucket should be crated"
+    help: "this is help for the s3 region"
+    default: "us-east-1"
+    options:
+      - "us-east-1"
+      - "us-east-2"	
+      - "us-west-1"
+      - "us-west-2"
+      - "ca-central-1"
+      - "eu-west-1"	  	  	    

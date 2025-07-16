@@ -1,0 +1,25 @@
+name: S3-dev
+description: "Create a S3 bucket"
+parameters: 
+  - name: "bucket-name"
+    type: "input"
+    prompt: "Enter the S3 bucket Name:"
+    help: "THis is the help for S3 Bucket name"
+    default: "my-s3-bucket"
+    validation:
+      - type: "regex"
+        pattern: "^[a-zA-Z0-9-]+$"
+        message:  "The S3 bucket name is not acceptable. Try again"
+ 
+  - name: "region"
+    type: "multi-select"
+    prompt: "Enter the region where the S3 bucket should be crated"
+    help: "this is help for the s3 region"
+    default: "us-east-1"
+    options:
+    - "us-east-1"
+    - "us-east-2"	
+    - "us-west-1"
+    - "us-west-2"
+    - "ca-central-1"
+    - "eu-west-1"	  	  	    

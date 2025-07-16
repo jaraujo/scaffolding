@@ -1,0 +1,42 @@
+version:      "1.0"
+name:         "module ss"
+description:  "This file lists all of the modules available for the user to choose from"
+modules:
+  - name: "EKS"
+    category: "The self-service modules available"
+    templateFolder: "EKS"
+    description:    "Create a self-service EKS module"
+    prerequisites:
+      - title:  "aws-cli"
+        description: "The aws cli is required"
+        url:          "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
+      - title:  "eksctl"
+        description: "The aws eksctl is required"
+        url:          "https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html"
+
+  - name: "S3"
+    category: "The self-service modules available"
+    templateFolder: "S3"
+    description:    "Create a self-service S3 module"
+    prerequisites:
+      - title:  "aws-cli"
+        description: "The aws cli is required"
+        url:          "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
+
+  - name: "Aurora"
+    category: "The self-service modules available"
+    templateFolder: "Aurora"
+    description:    "Create a self-service Aurora module"
+    prerequisites:
+      - title:  "aws-cli"
+        description: "The aws cli is required"
+        url:          "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
+
+  - name: "ElasticSearch"
+    category: "The self-service modules available"
+    templateFolder: "ElasticSearch"
+    description:    "Create a self-service ElasticSearch module"
+    prerequisites:
+      - title:  "aws-cli"
+        description: "The aws cli is required"
+        url:          "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"

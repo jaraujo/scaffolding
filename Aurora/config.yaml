@@ -1,0 +1,26 @@
+name: Aurora-dev
+description: "Create an Aurora DB"
+parameters: 
+  - name: "db-Name"
+    type: "input"
+    prompt: "Enter a Database name"
+    help: "THis is the help for a DB name"
+    default: "Aurora-name"
+    validation:
+      - type: "regex"
+        pattern: "^[a-zA-Z0-9-]+$"
+        message:  "The Aurora DB name is not acceptable.  Try again"
+
+
+  - name: "region"
+    type: "multi-select"
+    prompt: "Enter the region where the S3 bucket should be crated"
+    help: "this is help for the s3 region"
+    default: "us-east-1"
+    options:
+    - "us-east-1"
+    - "us-east-2"	
+    - "us-west-1"
+    - "us-west-2"
+    - "ca-central-1"
+    - "eu-west-1"

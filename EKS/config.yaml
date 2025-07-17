@@ -3,17 +3,17 @@ description: "Create an EKS cluster"
 parameters: 
   - name: "csi-id"
     type: "input"
-    prompt: "Whta is your app CSI ID:"
-    help: "THis is the help for CSI ID name"
+    prompt: "Whta is your app ID:"
+    help: "THis is the help for ID name"
     default: "168491"
     validation:
       - type: "regex"
         pattern: "^[a-zA-Z0-9-]+$"
-        message:  "The CSI ID format is invalid"
+        message:  "The App ID format is invalid"
 
   - name: "sector"
     type: "input"
-    prompt: "What Citi sector/LOB do you belong to:"
+    prompt: "What sector/LOB do you belong to:"
     help: "THis is the help for sector name"
     default: "CTS"
     validation:

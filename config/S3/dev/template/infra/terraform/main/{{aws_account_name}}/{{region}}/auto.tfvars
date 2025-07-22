@@ -10,5 +10,5 @@ tags = {
     sector      = {{sector}}
 }
 
-cluster_name    = "{{cluster-name}}"
+bucket_name    = "{{bucket-name}}"
 

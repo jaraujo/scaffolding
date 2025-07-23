@@ -32,7 +32,7 @@ modules:
         description: "The aws cli is required"
         url:          "https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html"
 
-  - name: "ElasticSearch"
+  - name: "Elastic-Search"
     category: "The self-service modules available"
     templateFolder: "ElasticSearch"
     description:    "Create a self-service ElasticSearch module"
